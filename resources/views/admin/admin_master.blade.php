@@ -1,37 +1,33 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+ <head>
 
-    <meta charset="utf-8" />
-    <title>Dashboard | Upcube - Admin & Dashboard Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesdesign" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href=" {{ asset('backend/ssets/images/favicon.ico') }}">
+        <meta charset="utf-8" />
+        <title>Dashboard | Upcube - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href=" {{asset('backend/assets/images/favicon.ico')}}">
 
-    <!-- jquery.vectormap css -->
-    <link href="{{ asset('backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}"
-        rel="stylesheet" type="text/css" />
+        <!-- jquery.vectormap css -->
+        <link href=" {{asset('backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css')}} " rel="stylesheet" type="text/css" />
 
-    <!-- DataTables -->
-    <link href="{{ asset('backend/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}"
-        rel="stylesheet" type="text/css" />
+        <!-- DataTables -->
+        <link href="{{asset('backend/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}  " rel="stylesheet" type="text/css" />
 
-    <!-- Responsive datatable examples -->
-    <link href="{{ asset('backend/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}"
-        rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href=" {{asset('backend/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')}} " rel="stylesheet" type="text/css" />
 
-    <!-- Bootstrap Css -->
-    <link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet"
-        type="text/css" />
-    <!-- Icons Css -->
-    <link href="{{ asset('backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="{{ asset('backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap Css -->
+        <link href="{{asset('/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href=" {{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{{asset('assets/css/app.min.css')}} " id="app-style" rel="stylesheet" type="text/css" />
 
-</head>
+    </head>
 
 <body data-topbar="dark">
 
@@ -48,19 +44,19 @@
                     <div class="navbar-brand-box">
                         <a href="index.html" class="logo logo-dark">
                             <span class="logo-sm">
-                                <img src="{{asset('backedn/assets/images/logo-sm.png')}} " alt="logo-sm" height="22">
+                                <img src="{{asset('backend/assets/images/logo-sm.png')}} " alt="logo-sm" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{asset('backedn/assets/images/logo-dark.png')}}" alt="logo-dark" height="20">
+                                <img src="{{asset('backend/assets/images/logo-dark.png')}}" alt="logo-dark" height="20">
                             </span>
                         </a>
 
                         <a href="index.html" class="logo logo-light">
                             <span class="logo-sm">
-                                <img src="{{asset('backedn/assets/images/logo-sm.png')}}" alt="logo-sm-light" height="22">
+                                <img src="{{asset('backend/assets/images/logo-sm.png')}}" alt="logo-sm-light" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{asset('backedn/assets/images/logo-light.png')}}" alt="logo-light" height="20">
+                                <img src="{{asset('backend/assets/images/logo-light.png')}}" alt="logo-light" height="20">
                             </span>
                         </a>
                     </div>
@@ -302,19 +298,19 @@
                                 <div class="row g-0">
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                            <img src="{{asset('backend/assets/images/brands/dropbox.png')}}" alt="dropbox">
                                             <span>Dropbox</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                            <img src="{{asset('backend/assets/images/brands/mail_chimp.png')}}" alt="mail_chimp">
                                             <span>Mail Chimp</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/slack.png" alt="slack">
+                                            <img src="{{asset('backend/assets/images/brands/slack.png')}}" alt="slack">
                                             <span>Slack</span>
                                         </a>
                                     </div>
@@ -367,7 +363,7 @@
                                 </a>
                                 <a href="" class="text-reset notification-item">
                                     <div class="d-flex">
-                                        <img src="assets/images/users/avatar-3.jpg"
+                                        <img src="{{asset('backend/assets/images/users/avatar-3.jpg')}}"
                                             class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-1">
                                             <h6 class="mb-1">James Lemire</h6>
@@ -398,7 +394,7 @@
 
                                 <a href="" class="text-reset notification-item">
                                     <div class="d-flex">
-                                        <img src="assets/images/users/avatar-4.jpg"
+                                        <img src="{{asset('backend/assets/images/users/avatar-4.jpg')}}"
                                             class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-1">
                                             <h6 class="mb-1">Salena Layfield</h6>
@@ -425,7 +421,7 @@
                     <div class="dropdown d-inline-block user-dropdown">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                            <img class="rounded-circle header-profile-user" src="{{asset('backend/assets/images/users/avatar-1.jpg')}} "
                                 alt="Header Avatar">
                             <span class="d-none d-xl-inline-block ms-1">Julia</span>
                             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -465,7 +461,7 @@
                 <!-- User details -->
                 <div class="user-profile text-center mt-3">
                     <div class="">
-                        <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle">
+                        <img src="{{asset('backend/assets/images/users/avatar-1.jpg')}}" alt="" class="avatar-md rounded-circle">
                     </div>
                     <div class="mt-3">
                         <h4 class="font-size-16 mb-1">Julia Hudda</h4>
@@ -708,7 +704,7 @@
         <!-- ============================================================== -->
         <div class="main-content">
 
-                @yield('admin');
+                @yield('admin')
             <!-- End Page-content -->
 
             <footer class="footer">
@@ -752,7 +748,7 @@
 
             <div class="p-4">
                 <div class="mb-2">
-                    <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="layout-1">
+                    <img src="{{asset('backend/assets/images/layouts/layout-1.jpg')}}" class="img-fluid img-thumbnail" alt="layout-1">
                 </div>
 
                 <div class="form-check form-switch mb-3">
@@ -761,20 +757,20 @@
                 </div>
 
                 <div class="mb-2">
-                    <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="layout-2">
+                    <img src=" {{asset('backend/assets/images/layouts/layout-2.jpg')}} " class="img-fluid img-thumbnail" alt="layout-2">
                 </div>
                 <div class="form-check form-switch mb-3">
                     <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch"
-                        data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css">
+                        data-bsStyle="{{asset('backend/assets/css/bootstrap-dark.min.css')}} " data-appStyle="assets/css/app-dark.min.css">
                     <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
                 </div>
 
                 <div class="mb-2">
-                    <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="layout-3">
+                    <img src="a{{asset('backend/assets/images/layouts/layout-3.jpg')}}" class="img-fluid img-thumbnail" alt="layout-3">
                 </div>
                 <div class="form-check form-switch mb-5">
                     <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch"
-                        data-appStyle="assets/css/app-rtl.min.css">
+                        data-appStyle=" {{asset('backend/assets/css/app-rtl.min.css')}} ">
                     <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
                 </div>
 
@@ -783,6 +779,7 @@
 
         </div> <!-- end slimscroll-menu-->
     </div>
+
     <!-- /Right-bar -->
 
     <!-- Right bar overlay-->
@@ -797,7 +794,7 @@
 
 
     <!-- apexcharts -->
-    <script src="{{ asset('backend/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{asset('backend/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
 
     <!-- jquery.vectormap map -->
     <script src="{{ asset('backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') }}">
