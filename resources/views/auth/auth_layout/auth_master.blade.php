@@ -16,6 +16,7 @@
     <link href="{{ asset('assets/css/icons.min.css') }} " rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href=" {{ asset('assets/css/app.min.css') }} " id="app-style" rel="stylesheet" type="text/css" />
+    <link href=" {{ asset('css/toastr.css') }} " id="app-style" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -30,6 +31,12 @@
     <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
     <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+
+      <script>
+     
+        @include('layouts.alert_toastr')
+    </script>
 
 </body>
 
