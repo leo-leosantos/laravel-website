@@ -102,7 +102,7 @@
     <script src="{{ asset('js/toastr.min.js') }}"></script>
 
     <script>
-        @include('layouts.alert_toastr')
+        @include('_partials.alert_toastr')
     </script>
 
 </body>

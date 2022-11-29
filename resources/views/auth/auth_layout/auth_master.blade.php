@@ -35,7 +35,7 @@
 
       <script>
      
-        @include('layouts.alert_toastr')
+        @include('_partials.alert_toastr')
     </script>
 
 </body>
