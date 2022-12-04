@@ -3,7 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
-    AdminController
+    AdminController,
+    Home\HomeSliderController
 };
 
 
@@ -24,6 +25,12 @@ Route::controller(AdminController::class)->group(function(){
 
 });
 
+//Home slide  All route
+Route::controller(HomeSliderController::class)->group(function(){
+    Route::get('/home/slide','HomeSlider')->name('home.slide');
+  
+
+});
 
 Route::get('/dashboard', function () {
     return view('admin.index');

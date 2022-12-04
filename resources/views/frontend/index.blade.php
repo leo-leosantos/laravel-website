@@ -1,5 +1,7 @@
 @extends('frontend.main_master')
-@section('main'){{asset('frontend/')}} 
+@section('main')
+ 
+
 <!-- banner-area -->
 <section class="banner">
     <div class="container custom-container">
