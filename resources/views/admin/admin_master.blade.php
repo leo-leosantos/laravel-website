@@ -101,9 +101,15 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
 
+
     <script>
         @include('_partials.alert_toastr')
     </script>
+    <!--tinymce js-->
+    <script src="{{ asset('libs/tinymce/tinymce.min.js') }}"></script>
+
+    <!-- init js -->
+    <script src="{{ asset('assets/js/pages/form-editor.init.js') }}"></script>
 
 </body>
 
