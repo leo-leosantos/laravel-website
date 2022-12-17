@@ -114,6 +114,12 @@
     <script src=" {{asset('assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}} "></script>
     <!-- Datatable init js -->
     <script src=" {{asset('assets/js/pages/datatables.init.js')}} "></script>
+
+
+        <!-- swetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('assets/js/code.js') }}"></script>
+
 </body>
 
 </html>
