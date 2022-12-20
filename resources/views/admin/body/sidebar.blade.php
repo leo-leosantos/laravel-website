@@ -43,7 +43,7 @@
                  </li>
                       <li>
                      <a href="javascript: void(0);" class="has-arrow waves-effect">
-                         <i class="ri-mail-send-line"></i>
+                        <i class="fas fa-pager"></i>
                          <span>Portfolio Pages Setup</span>
                      </a>
                      <ul class="sub-menu" aria-expanded="false">

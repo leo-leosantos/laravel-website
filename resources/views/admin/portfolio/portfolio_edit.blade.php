@@ -10,21 +10,20 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Add Portfolio Page</h4>
+                        <h4 class="card-title">Edit Portfolio Page</h4>
 
                         <form class="form-group" method="post"
-                            action="{{route('store.portfolio')}}"
+                            action="{{route('update.portfolio', $portfolio->id)}}"
                             enctype="multipart/form-data">
                             @csrf
-
-                            <input type="hidden" name="id">
+                             <input type="hidden" name="id" value="{{$portfolio->id}}"> 
                             <div class="row mb-3">
                                 <label for="portfolio-name" class="col-sm-2
                                     col-form-label">Portfolio Name</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" type="text"
                                         placeholder="portfolio name" id="portfolio-name"
-                                        name="portfolio_name" value=" {{old('portfolio_name')}}">
+                                        name="portfolio_name" value=" {{old('portfolio_name') ?? $portfolio->portfolio_name }}">
                                         @error('portfolio_name')
                                         <span class="text-danger" >{{$message}}</span>    
                                         @enderror
@@ -36,7 +35,7 @@
                                 <div class="col-sm-10">
                                     <input class="form-control" type="text"
                                         placeholder="Portfolio Title" id="portfolio_title"
-                                        name="portfolio_title" value=" {{old('portfolio_title')}}"
+                                        name="portfolio_title" value=" {{old('portfolio_title') ?? $portfolio->portfolio_title }}"
                                     >
                                     @error('portfolio_title')
                                     <span class="text-danger">{{$message}}</span>    
@@ -48,9 +47,9 @@
                                 <label for="portfolio_description" class="col-sm-2
                                     col-form-label">Portfolio Description</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" 
-                                      name="portfolio_description" id="elm1"  rows="3">
-                                        {{old('portfolio_description')}}
+                                    <textarea 
+                                      name="portfolio_description" id="elm1">
+                                        {{ $portfolio->portfolio_description }}
                                     </textarea>
                                 </div>
                             </div>
@@ -69,11 +68,11 @@
                                 <div class="col-sm-10">
 
                                     <img class="rounded avatar-lg"
-                                        src="{{url('upload/no_image.jpg') }}"
+                                        src="{{asset($portfolio->portfolio_image)}}"
                                     alt="" id="showImage">
                                 </div>
                             </div>
-                            <input type="submit" value="Insert Portfolio Page"
+                            <input type="submit" value="Update Portfolio Page"
                                 name="submit" class="btn btn-info waves-effect
                                 waves-light">
                         </form>
