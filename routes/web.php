@@ -7,7 +7,8 @@ use App\Http\Controllers\{
     Home\HomeSliderController,
     Home\AboutController,
     Home\PortfolioController,
-    Home\BlogCategoryController
+    Home\BlogCategoryController,
+    Home\BlogController
 };
 
 
@@ -42,6 +43,12 @@ Route::controller(BlogCategoryController::class)->group(function(){
     Route::get('/edit/blog/category/{id}','EditBlogCategory')->name('edit.blog.category');
     Route::post('/update/blog/category/{id}','UpdateBlogCategory')->name('update.blog.category');
     Route::get('/delete/blog/category/{id}','DeleteBlogCategory')->name('delete.blog.category');
+
+});
+//Blog All route
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/all/blog','AllBlog')->name('all.blog');
+   
 
 });
 
