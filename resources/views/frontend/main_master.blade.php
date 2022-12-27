@@ -11,7 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- CSS here -->
-        <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
         <link rel="stylesheet" href="{{asset('frontend/assets/css/magnific-popup.css')}}">
         <link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome-all.min.css')}}">
