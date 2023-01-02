@@ -62,7 +62,6 @@
                      <ul class="sub-menu" aria-expanded="false">
                          <li><a href="{{route('all.blog.category')}}">All Blog Category</a></li>
                         <li><a href="{{route('add.blog.category')}}">Add Blog Category</a></li>
-
                      </ul>
                  </li>
 
@@ -73,8 +72,8 @@
                      </a>
                      <ul class="sub-menu" aria-expanded="false">
                          <li><a href="{{route('all.blog')}}">All Blog Page</a></li>
-                         <li><a href="pages-timeline.html">Add Blog Page</a></li>
-                        
+                         <li><a href="{{route('add.blog')}}">Add Blog Page</a></li>
+
                      </ul>
                  </li>
              </ul>

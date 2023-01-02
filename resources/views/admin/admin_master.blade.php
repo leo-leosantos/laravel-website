@@ -24,6 +24,8 @@
         type="text/css" />
 
     <!-- Bootstrap Css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" >
+
     <link href="{{ asset('css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href=" {{ asset('css/icons.min.css') }}" rel="stylesheet" type="text/css" />
@@ -119,7 +121,9 @@
         <!-- swetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="{{ asset('assets/js/code.js') }}"></script>
-
+    
+    <!-- boostrap tags -->
+    <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
 </body>
 
 </html>
