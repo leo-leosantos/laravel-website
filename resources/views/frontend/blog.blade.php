@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8 col-md-10">
                     <div class="breadcrumb__wrap__content">
-                        <h2 class="title">{{ $categoryname->blog_category }}</h2>
+                        <h2 class="title">All Blogs</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -43,7 +43,7 @@ use Illuminate\Support\Str;
             <div class="row">
                 <div class="col-lg-8">
 
-                    @foreach ($blogpost as $item )
+                    @foreach ($allblogs as $item )
 
 
                     <div class="standard__blog__post">
@@ -110,8 +110,7 @@ use Illuminate\Support\Str;
                             <h4 class="widget-title">Categories</h4>
                             <ul class="sidebar__cat">
                                 @foreach ($categories as $category)
-
-                                <li class="sidebar__cat__item"><a href="{{ route('category.blog', $category->id) }}">{{ $category->blog_category }}</a></li>
+                                    <li class="sidebar__cat__item"><a href="{{ route('category.blog', $category->id) }}">{{ $category->blog_category }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
