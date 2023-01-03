@@ -4,14 +4,16 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AdminController,
-    Home\HomeSliderController,
-    Home\AboutController,
-    Home\PortfolioController,
-    Home\BlogCategoryController,
-    Home\BlogController
 };
 
-
+use App\Http\Controllers\Home\{
+    HomeSliderController,
+    AboutController,
+    PortfolioController,
+    BlogCategoryController,
+    BlogController,
+    FooterController
+};
 Route::get('/', function () {
     return view('frontend.index');
 });
@@ -84,7 +86,12 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::get('/delete/portfolio/{id}','DeletePortfolio')->name('delete.portfolio');
     Route::get('/portfolio/details/{id}','PortfolioDetails')->name('portfolio.details');
 
+});
 
+//Footer   All route
+Route::controller(FooterController::class)->group(function(){
+    Route::get('/footer/setup','FooterSetup')->name('footer.setup');
+    Route::post('/footer/setup','UpdateFooter')->name('update.footer');
 
 });
 
