@@ -48,7 +48,7 @@ class BlogController extends Controller
 
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
 
-        $image_save = Image::make($image)->resize(430, 327)->save('upload/blog/' . $name_gen);
+        $image_save = Image::make($image)->resize(430,327)->save('upload/blog/' . $name_gen);
 
         $save_url = 'upload/blog/' . $name_gen;
 
@@ -145,6 +145,28 @@ class BlogController extends Controller
             'alert-type' => 'error'
         ];
         return redirect()->route('all.blog')->with($notification);
+
+    }
+
+    public function BlogDetails($id)
+    {
+        $allblogs = Blog::latest()->limit(5)->get();
+        $categories = BlogCategory::orderBy('blog_category', 'ASC')->get();
+        $blog = Blog::findOrFail($id);
+
+
+        return view('frontend.blog_details', compact('blog', 'allblogs','categories'));
+
+    }
+
+    public function CategoryBlog($id)
+    {
+
+        $blogpost = Blog::where('blog_category_id',$id)->orderBy('id', 'DESC')->get();
+        $allblogs = Blog::latest()->limit(5)->get();
+        $categories = BlogCategory::orderBy('blog_category', 'ASC')->get();
+        return view('frontend.category_blog_details', compact('blogpost','allblogs','categories'));
+
 
     }
 }
