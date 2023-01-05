@@ -12,7 +12,8 @@ use App\Http\Controllers\Home\{
     PortfolioController,
     BlogCategoryController,
     BlogController,
-    FooterController
+    FooterController,
+    ContactController
 };
 Route::get('/', function () {
     return view('frontend.index');
@@ -95,6 +96,14 @@ Route::controller(FooterController::class)->group(function(){
 
 });
 
+//Contact   All route
+Route::controller(ContactController::class)->group(function(){
+    Route::get('/contact','Contact')->name('contact.me');
+    Route::post('/store/message','StoreMessage')->name('store.message');
+    Route::get('/contact/message','ContactMessage')->name('contact.message');
+    Route::get('/delete/message/{id}','DeleteMessage')->name('delete.message');
+
+});
 
 Route::get('/dashboard', function () {
     return view('admin.index');

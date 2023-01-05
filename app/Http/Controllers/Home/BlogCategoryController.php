@@ -24,7 +24,7 @@ class BlogCategoryController extends Controller
         $request->validate([
             'blog_category' => 'required'
         ],[
-            'blog_category.required' =>  'Name Blog Category is Required'      
+            'blog_category.required' =>  'Name Blog Category is Required'
         ]);
 
          BlogCategory::insert([
@@ -51,7 +51,7 @@ class BlogCategoryController extends Controller
         $request->validate([
             'blog_category' => 'required'
         ],[
-            'blog_category.required' =>  'Name Blog Category is Required'      
+            'blog_category.required' =>  'Name Blog Category is Required'
         ]);
 
          BlogCategory::findOrFail($id)->update([
@@ -77,4 +77,6 @@ class BlogCategoryController extends Controller
         return redirect()->route('all.blog.category')->with($notification);
 
     }
+
+
 }

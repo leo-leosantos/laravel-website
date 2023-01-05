@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{{asset('frontend/assets/css/default.css')}}">
         <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
         <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/toastr.css') }}">
     </head>
     <body>
 
@@ -67,5 +68,9 @@
         <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
         <script src="{{asset('frontend/assets/js/plugins.js')}}"></script>
         <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+
+        <script>
+            @include('_partials.alert_toastr')
+        </script>
     </body>
 </html>
