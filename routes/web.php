@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AdminController,
 };
+use App\Http\Controllers\Demo\{
+    DemoController,
+};
 
 use App\Http\Controllers\Home\{
     HomeSliderController,
@@ -15,21 +18,30 @@ use App\Http\Controllers\Home\{
     FooterController,
     ContactController
 };
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 
 
 
 //Admin All route
-Route::controller(AdminController::class)->group(function(){
-    Route::get('/admin/logout','destroy')->name('admin.logout');
-    Route::get('/admin/profile','Profile')->name('admin.profile');
-    Route::get('/edit/profile','EditProfile')->name('edit.profile');
-    Route::post('/store/profile','StoreProfile')->name('store.profile');
-    Route::get('/change/password','ChangePassword')->name('change.password');
-    Route::post('/update/password','UpdatePassword')->name('update.password');
 
+Route::middleware(['auth'])->group(function(){
+    Route::controller(AdminController::class)->group(function(){
+        Route::get('/admin/logout','destroy')->name('admin.logout');
+        Route::get('/admin/profile','Profile')->name('admin.profile');
+        Route::get('/edit/profile','EditProfile')->name('edit.profile');
+        Route::post('/store/profile','StoreProfile')->name('store.profile');
+        Route::get('/change/password','ChangePassword')->name('change.password');
+        Route::post('/update/password','UpdatePassword')->name('update.password');
+    });
+});
+
+
+//Home index frontend
+
+Route::controller(DemoController::class)->group(function(){
+    Route::get('/','HomeMain')->name('home');
 });
 
 //Home slide  All route
@@ -86,6 +98,7 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::post('/update/portfolio','UpdatePortfolio')->name('update.portfolio');
     Route::get('/delete/portfolio/{id}','DeletePortfolio')->name('delete.portfolio');
     Route::get('/portfolio/details/{id}','PortfolioDetails')->name('portfolio.details');
+    Route::get('/portfolio','HomePortfolio')->name('home.portfolio');
 
 });
 

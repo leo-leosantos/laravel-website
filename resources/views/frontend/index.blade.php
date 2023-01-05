@@ -1,6 +1,8 @@
 @extends('frontend.main_master')
 @section('main')
- 
+@section('title')
+    Home | EasyLeanning WebSite
+@endsection
 
 <!-- banner-area -->
     @include('frontend.home_all.home_slide')

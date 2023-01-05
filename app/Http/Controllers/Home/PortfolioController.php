@@ -10,7 +10,7 @@ use Carbon\Carbon;
 
 class PortfolioController extends Controller
 {
-    
+
     public function AllPortfolio()
     {
 
@@ -23,7 +23,7 @@ class PortfolioController extends Controller
 
         return view('admin.portfolio.portfolio_add');
     }//end method
-    
+
     public function StorePortfolio(Request $request)
     {
         $request->validate([
@@ -149,5 +149,11 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::findOrFail($id);
         return view('frontend.portfolio_details', compact('portfolio'));
     }
+
+    public function HomePortfolio()
+    {
+        $portfolio = Portfolio::latest()->get();
+        return view('frontend.portfolio', compact('portfolio'));
+    }//end method
 
 }

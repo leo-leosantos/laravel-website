@@ -1,5 +1,8 @@
 @extends('frontend.main_master')
 @section('main')
+@section('title')
+    About | EasyLeanning WebSite
+@endsection
     <!-- main-area -->
     <main>
 
@@ -90,7 +93,7 @@
                                 <div class="tab-pane fade show active" id="about" role="tabpanel"
                                     aria-labelledby="about-tab">
                                     <p class="desc">{!! $aboutpage->long_description !!}</p>
-                                  
+
                                 </div>
                                 <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
                                     <div class="about__skill__wrap">
