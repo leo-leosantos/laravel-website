@@ -58,6 +58,8 @@ class AdminController extends Controller
 
             $file = $request->file('profile_image');
 
+            unlink( public_path('upload/admin_images/'.$data->profile_image));
+        
             $filename = date('YmdHi') . $file->getClientOriginalName();
             $file->move(public_path('upload/admin_images'), $filename);
             $data['profile_image'] = $filename;
@@ -75,7 +77,7 @@ class AdminController extends Controller
                 'alert-type' => 'error'
             ];
         }
-     
+
         return redirect()->route('admin.profile')->with($notification);
     }
 
